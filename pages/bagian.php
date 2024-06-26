@@ -30,7 +30,7 @@ if(isset($_SESSION['pesan'])) {
         <div class="col">
             <?php 
             $selectSQL = "SELECT * FROM bagian";
-            $result = mysqli_query($con,$selectSQL);
+            $result = $con->query("SELECT * FROM bagian");
             if (!$result) {
             ?>
             <div class="alert alert-danger">
